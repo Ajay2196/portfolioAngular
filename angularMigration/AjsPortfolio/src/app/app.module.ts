@@ -14,6 +14,12 @@ import { PrototypesComponent } from './prototypes/prototypes.component';
 import { UIComponent } from './ui/ui.component';
 import { DigitalArtComponent } from './digital-art/digital-art.component';
 import { BlogComponent } from './blog/blog.component';
+import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,12 +34,16 @@ import { BlogComponent } from './blog/blog.component';
     PrototypesComponent,
     UIComponent,
     DigitalArtComponent,
-    BlogComponent
+    BlogComponent,
+    CreateBlogPostComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     NgxTypedJsModule,
+    HttpClientModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

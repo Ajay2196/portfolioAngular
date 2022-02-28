@@ -5,6 +5,7 @@ import { AugmentedRealityComponent } from './augmented-reality/augmented-reality
 import { BlogComponent } from './blog/blog.component';
 import { DigitalArtComponent } from './digital-art/digital-art.component';
 import { HomeComponent } from './home/home.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { PrototypesComponent } from './prototypes/prototypes.component';
 import { UIComponent } from './ui/ui.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'digital-art', component: DigitalArtComponent },
   { path: 'prototype', component: PrototypesComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'login', component: LoginPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 

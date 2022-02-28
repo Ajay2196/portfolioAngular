@@ -1,0 +1,17 @@
+<div class="login">
+    <form action="">
+        <div class="login__field">
+            <label for="username" class="login__label">Username</label>
+            <input type="text" name="username" [(ngModel)]="username" class="login__input" />
+        </div>
+        <div class="login__field">
+            <label for="password" class="login__label">Password</label>
+            <input name="password" type="password" [(ngModel)]="password" class="login__input" />
+        </div>
+        <div class="login__actions">
+            <div class="login__submit">
+                <button class="button" (click)="authenticateMe()">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
