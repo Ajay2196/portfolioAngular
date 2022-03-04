@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class BlogComponent implements OnInit {
   public blogPosts : Observable<any>[] = [];
-
+  blogPost : string ="";
   constructor() {
  
    }

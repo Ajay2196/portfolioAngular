@@ -13,4 +13,7 @@ export class HttpService {
     // now returns an Observable of Config
     return this.http.post<any>(environment.baseURL+environment.authenticate,user);
   }
+  CreatePost(item:any){
+    return this.http.post<any>(environment.baseURL+environment.createPosts,item);
+  }
 }

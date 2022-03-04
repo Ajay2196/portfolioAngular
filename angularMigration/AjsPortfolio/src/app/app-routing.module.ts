@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AudiographyComponent } from './audiography/audiography.component';
 import { AugmentedRealityComponent } from './augmented-reality/augmented-reality.component';
 import { BlogComponent } from './blog/blog.component';
+import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.component';
 import { DigitalArtComponent } from './digital-art/digital-art.component';
 import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'prototype', component: PrototypesComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'createBlog', component: CreateBlogPostComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 

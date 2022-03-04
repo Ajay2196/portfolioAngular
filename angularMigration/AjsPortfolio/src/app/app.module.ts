@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 
 @NgModule({
@@ -36,10 +37,11 @@ import { FormsModule } from '@angular/forms';
     DigitalArtComponent,
     BlogComponent,
     CreateBlogPostComponent,
-    LoginPageComponent
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
+    AngularEditorModule,
     NgxTypedJsModule,
     HttpClientModule,
     AppRoutingModule,

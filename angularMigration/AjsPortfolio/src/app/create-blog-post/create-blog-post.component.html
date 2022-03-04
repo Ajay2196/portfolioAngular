@@ -1,1 +1,27 @@
-<p>create-blog-post works!</p>
+
+    <div class="d-flex flex-column body-container mt-5">
+
+
+        <section class="work__section mb-4">
+            <h2 class="container section__header">
+                 Create Blog Post
+            </h2>
+            <div class="container section__description mb-4">
+                <p class="description">
+                Please fill out the details to create a blog post
+                </p>
+                <div class="container-fluid p-0 ">
+                    <div class="row container__category">
+                        <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent" ></angular-editor>
+
+                    </div>
+                    <button (click)="createPost()"> Submit</button>
+                </div>
+            </div>
+
+         
+        </section>
+
+   <aj-footer></aj-footer>
+
+    </div>
