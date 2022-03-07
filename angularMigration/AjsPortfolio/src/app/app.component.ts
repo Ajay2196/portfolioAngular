@@ -13,13 +13,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let user={
-      username:"Ajay",
-      password:"Ajay1996@"
-    }
-    this.http.authenticateUser(user).subscribe(val=>{
-      console.log(val)
-    })
+   
   }
   
 

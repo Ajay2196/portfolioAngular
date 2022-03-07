@@ -16,7 +16,13 @@ export class BloglistComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.GetPostsByCategory(this.category).subscribe( {next: (posts)=> {this.blogPosts = posts}, error : (error)=>{this.error = error; console.log("lol error :" + error.message)}})
+    if(!['General','Technical'].includes(this.category['category'])){
+      this.router.navigate(['blog']);
+    }
+    else{
+      this.http.GetPostsByCategory(this.category).subscribe( {next: (posts)=> {this.blogPosts = posts}, error : (error)=>{this.error = error; console.log("lol error :" + error.message)}})
+
+    }
 
   }
   goToBlogPost(str:string){
