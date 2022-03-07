@@ -22,6 +22,7 @@ export class LoginPageComponent implements OnInit {
     }
     this.http.authenticateUser(userData).subscribe(user =>{
       if(user.success){
+        sessionStorage.setItem('isAJLoggedIn', user.user.id);
         this.router.navigate(['/home']);
       }
     })

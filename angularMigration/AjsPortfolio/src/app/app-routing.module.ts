@@ -7,6 +7,7 @@ import { BlogComponent } from './blog/blog.component';
 import { BloglistComponent } from './bloglist/bloglist.component';
 import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.component';
 import { DigitalArtComponent } from './digital-art/digital-art.component';
+import { AuthenticatedUserGuard } from './guards/authenticated-user.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PhotographyComponent } from './photography/photography.component';
@@ -25,7 +26,7 @@ const routes: Routes = [
   { path: 'prototype', component: PrototypesComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'createBlog', component: CreateBlogPostComponent },
+  { path: 'createBlog', component: CreateBlogPostComponent, canActivate: [AuthenticatedUserGuard] },
   { path: 'blogTitles', component: BloglistComponent },
   { path: 'blogPost', component: BlogPostComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
