@@ -11,7 +11,7 @@ export class BloglistComponent implements OnInit {
   blogPosts : any = [];
   error = null;
   category :Params;
-  constructor(private http: HttpService, private router : Router, private route: ActivatedRoute) { 
+  constructor(private http: HttpService, public router : Router, private route: ActivatedRoute) { 
     this.category = this.route.snapshot.queryParams;
   }
 

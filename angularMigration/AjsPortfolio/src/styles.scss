@@ -285,3 +285,25 @@ h1.section__header {
     background-color: #fff;
     min-height: 30vh !important;
 }
+.blogCategory{
+    font-weight: 500;
+}
+a.blogCategory{
+    color: #1282a8;
+    font-weight: 500;
+}
+a.blogCategory:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.crumb{
+    font-weight: 500;
+}
+a.crumb{
+    color: #1282a8;
+    font-weight: 500;
+}
+a.crumb:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -2,11 +2,15 @@
     <div class="d-flex flex-column body-container mt-5">
 
 
-        <section class="work__section mb-4">
+        <section class="work__section mb-4 container section__description mb-4">
+            <div class="breadcrumb__blog py-4">
+                <a (click)="router.navigate(['/home'])" class="crumb">Home </a>|
+                <span class="crumb"> Blog Posts </span>
+            </div>
             <h2 class="container section__header">
                 <i class="fal  fal fa-blog"></i> Blog Posts
             </h2>
-           <div class="container section__description mb-4">
+           <div class="">
           
            
             <div class="row container__category">

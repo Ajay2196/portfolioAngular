@@ -4,7 +4,7 @@
  
 export const environment = {
   production: false,
-  baseURL : "",
+  baseURL : "http://localhost:3000/",
   registerUser : "portfolioUsers/reg/",
   authenticate : "portfolioUsers/authenticate",
   getPostByCategory : "blogPosts/getTitlesByCategory",

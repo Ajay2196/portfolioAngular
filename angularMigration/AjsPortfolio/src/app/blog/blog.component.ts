@@ -11,7 +11,7 @@ import { HttpService } from '../services/http-service.service';
 export class BlogComponent implements OnInit {
 
   blogPost : string ="";
-  constructor( private router : Router, private http: HttpService) {
+  constructor( public router : Router, private http: HttpService) {
  
    }
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { HttpService } from '../services/http-service.service';
 
 @Component({
@@ -12,14 +12,16 @@ export class BlogPostComponent implements OnInit {
   postId: Params;
   blogPost : any;
   error = null;
-  constructor(private http : HttpService, private route : ActivatedRoute) {
+  constructor(private http : HttpService, private route : ActivatedRoute, public router : Router) {
     this.postId = this.route.snapshot.queryParams;
 
    }
 
   ngOnInit(): void {
-    this.http.GetPostById(this.postId).subscribe( {next: (posts)=> {this.blogPost = posts;
-    console.log(JSON.stringify(this.blogPost))}, error : (error)=>{this.error = error; console.log("lol error :" + error.message)}})
+    this.http.GetPostById(this.postId).subscribe( {next: (posts)=> {this.blogPost = posts;}, error : (error)=>{this.error = error; console.log("lol error :" + error.message)}})
   }
+  navigate(){
+    this.router.navigate(['/blogTitles'],{queryParams : { category:this.blogPost.category }})
 
+  }
 }

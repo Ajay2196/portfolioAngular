@@ -2,11 +2,18 @@
     <div class="d-flex flex-column body-container mt-5">
 
 
-        <section class="work__section mb-4">
+        <section class="work__section mb-4 container section__description mb-4">
+            <div class="breadcrumb__blog py-4">
+                <a (click)="router.navigate(['/home'])" class="crumb">Home </a>|
+                <a (click)="router.navigate(['/blog'])" class="crumb"> Blog Posts </a> |
+                <span  class="crumb">{{category['category'] == 'Technical' ? 'Technology Blog Posts' : (category['category'] == 'General' ? ' Interaction and Experience Design Blog Posts' : '')}}
+                </span>
+            </div>
             <h2 class="container section__header">
+               
+
                 <i class="fal  fal fa-blog"></i> {{category['category'] == 'Technical' ? 'Technology Blog Posts' : (category['category'] == 'General' ? ' Interaction and Experience Design Blog Posts' : '')}}
             </h2>
-          <div class="container section__description mb-4">
                <div class="row container__category">
                    <ng-container *ngIf="!error">
                     <ng-container *ngFor=" let post of blogPosts">
@@ -25,11 +32,17 @@
                             </div>
                         </a> 
                     </ng-container>
+                    <ng-container *ngIf="blogPosts.length==0">
+                    <div class="handler__message ">
+                        No Blog  have been Posted for this category yet Or they have been Deleted.
+                    </div>
+                        
+                    </ng-container>
                    </ng-container>
               
                
 
-            </div>
+         
             </div> 
            
         </section>

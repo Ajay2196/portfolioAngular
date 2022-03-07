@@ -1,18 +1,30 @@
 
-    <div class="d-flex flex-column body-container mt-5">
-
-
-        <section class="work__section mb-4">
-            <h2 class="container section__header">
+    <div class="d-flex flex-column body-container">
+        <section class="work__section container section__description">
+            <div class="breadcrumb__blog py-4">
+                <a (click)="router.navigate(['/home'])" class="crumb">Home </a>|
+                <a (click)="router.navigate(['/blog'])" class="crumb"> Blog Posts </a> |
+                <a (click)="navigate();" *ngIf="!error" class="crumb">{{blogPost.category == 'Technical' ? 'Technology Blog Posts' : (blogPost.category == 'General' ? ' Interaction and Experience Design Blog Posts' : '')}}
+                </a> |
+                <span class="blogCategory"> {{blogPost.title}}</span>
+            </div>
+                <h2 *ngIf="!error" class="p-4 ls-0">
                  {{blogPost.title}}
             </h2>
-            <div class="container section__description mb-4">
-                <p class="description">
-                </p>
+            <div class=" ">
                 <div class="container-fluid p-0 ">
-                    <div class="row container__category">
+                    <div class="row container__category px-4">
                     <ng-container *ngIf="!error">
-                         
+                            <div class="profile-info">
+                                <div class="img-wrapper profile_img-wrapper d-flex my-4">
+                                    <img src="assets//Ajay.png" alt="Profile image">
+                                    <div class="info-container">
+                                        <span class="profile__name">Ajay "AJ" Vijayakumaran</span>
+                                        <span class="d-block time">{{blogPost.time | date: 'medium'}}</span>
+                                        <span class="d-block ">10 Min Read</span>
+                                    </div>
+                                </div>
+                            </div>
                             <p  class="col-md-12" [innerHtml]="blogPost.post"></p>
                       
                     </ng-container>
@@ -23,6 +35,6 @@
             
         </section>
 
-   <aj-footer></aj-footer>
+   <!-- <aj-footer></aj-footer> -->
 
     </div>
