@@ -12,10 +12,28 @@
                 </p>
                 <div class="container-fluid p-0 ">
                     <div class="row container__category">
-                        <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent" ></angular-editor>
+                        <div class="form-group col-12">
+                            <label for="title">Blog Post Title</label>
+                        <input type="text" class="form-control" id="name" id="title" required [(ngModel)]="title" name="name">
+                           
+                        </div>
+                        <div class="form-group col-12 pb-2">
+                            <label for="category">Blog Post Category</label>
+                            <select class="form-control" id="category" [(ngModel)]="category" required>
+                              <option *ngFor="let cat of categories" [value]="cat.category" id="category_{{cat.id}}">{{cat.category}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 pb-2">
+                            <label for="blogPost">Create your post below!</label>
+                            <angular-editor id="blogPost" [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent" ></angular-editor>
+
+                        </div>
 
                     </div>
-                    <button (click)="createPost()"> Submit</button>
+                   <div class="pull-right">
+                    <button class="btn btn-primary" (click)="createPost()"> Submit</button>
+
+                   </div>
                 </div>
             </div>
 

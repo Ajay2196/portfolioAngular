@@ -20,6 +20,8 @@ import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.com
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { BloglistComponent } from './bloglist/bloglist.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     BlogComponent,
     CreateBlogPostComponent,
     LoginPageComponent,
+    BloglistComponent,
+    BlogPostComponent,
   ],
   imports: [
     BrowserModule,

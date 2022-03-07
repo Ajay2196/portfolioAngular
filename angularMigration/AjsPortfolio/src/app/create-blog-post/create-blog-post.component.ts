@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { HttpService } from '../services/http-service.service';
 
 @Component({
@@ -7,26 +8,34 @@ import { HttpService } from '../services/http-service.service';
   styleUrls: ['./create-blog-post.component.scss']
 })
 export class CreateBlogPostComponent implements OnInit,OnDestroy {
+  subscription: Subscription | undefined;
 
   constructor(private http : HttpService) { }
-
-  ngOnDestroy(): void {
-    console.log(this.htmlContent);
-  }
   htmlContent : string ="";
+  categories:any[]  = [{id:1, category: "General"}, {id:2, category : "Technical"}];
+  title : string ="";
+  category : string ="";
+  ngOnDestroy(): void {
+   if(this.subscription) this.subscription.unsubscribe();
+  }
   ngOnInit(): void {
   } 
-
   createPost(){
     var item ={
-      post : this.htmlContent,
+      title : this.title,
+      category: this.category,
+      post : this.htmlContent,  
       time : new Date()
     }
-    this.http.CreatePost(item).subscribe(e=>{
+
+  this.subscription=  this.http.CreatePost(item).subscribe(e=>{
       if(e.success){
         console.log("success!");
+        this.category = "";
+        this.htmlContent="";
+        this.title = "";
         }
-    })
+    });
   }
 
 }

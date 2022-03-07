@@ -1,0 +1,28 @@
+
+    <div class="d-flex flex-column body-container mt-5">
+
+
+        <section class="work__section mb-4">
+            <h2 class="container section__header">
+                 {{blogPost.title}}
+            </h2>
+            <div class="container section__description mb-4">
+                <p class="description">
+                </p>
+                <div class="container-fluid p-0 ">
+                    <div class="row container__category">
+                    <ng-container *ngIf="!error">
+                         
+                            <p  class="col-md-12" [innerHtml]="blogPost.post"></p>
+                      
+                    </ng-container>
+                    </div>
+
+                </div>
+            </div>
+            
+        </section>
+
+   <aj-footer></aj-footer>
+
+    </div>

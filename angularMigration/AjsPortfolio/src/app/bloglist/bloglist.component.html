@@ -1,0 +1,39 @@
+
+    <div class="d-flex flex-column body-container mt-5">
+
+
+        <section class="work__section mb-4">
+            <h2 class="container section__header">
+                <i class="fal  fal fa-blog"></i> {{category['category'] == 'Technical' ? 'Technology Blog Posts' : (category['category'] == 'General' ? ' Interaction and Experience Design Blog Posts' : 'Angular Posts')}}
+            </h2>
+          <div class="container section__description mb-4">
+               <div class="row container__category">
+                   <ng-container *ngIf="!error">
+                    <ng-container *ngFor=" let post of blogPosts">
+                        <a class="category__panel   col-md-4" (click) = "goToBlogPost(post._id)" >
+                            <div class="card category__card ">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">{{post.title}} </h5>
+                                    <div class="img-container">
+                                        <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                    <i class=" fa-icon fal fa-blog"></i>
+        
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+                        </a> 
+                    </ng-container>
+                   </ng-container>
+              
+               
+
+            </div>
+            </div> 
+           
+        </section>
+
+   <aj-footer></aj-footer>
+
+    </div>

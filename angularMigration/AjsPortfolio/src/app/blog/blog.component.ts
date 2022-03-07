@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { HttpService } from '../services/http-service.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,13 +9,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  public blogPosts : Observable<any>[] = [];
+
   blogPost : string ="";
-  constructor() {
+  constructor( private router : Router, private http: HttpService) {
  
    }
 
   ngOnInit(): void {
   }
-
+  navigateURL(str: any){
+    this.router.navigate(['/blogTitles'],{queryParams : { category:str }})
+  }
 }
