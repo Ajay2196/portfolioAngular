@@ -1,16 +1,279 @@
+<div class="d-flex flex-column body-container mt-5 ">
 
-    <div class="d-flex flex-column body-container mt-5 ">
 
+    <section class="work__section mb-4 container section__description mb-4">
+        <div class="breadcrumb__blog py-4">
+            <a (click)="router.navigate(['/home'])" class="crumb">Home </a>|
+            <a (click)="router.navigate(['/projects'])" class="crumb">Projects </a>|<span class="crumb"> FarmWise
+            </span>
+        </div>
+        <h2 class="container section__header">
+            <i class="fal  fa-ruler-combined"></i> FarmWise
+        </h2>
+        <div class="container section__description mb-4">
+            <p class="description mt-4">
 
-        <section class="work__section mb-4 m-auto">
-            <h2 class="container section__header mb-5">
-                <i class="fal  fa-ruler-combined"></i> Coming Soon - Under construction
-            </h2>
-            <img src="../../assets/coming soon.svg" class=" img-responsive" alt="" c>
+                The FarmWise is a project that has been modelled keeping in mind the strong pillars of sustainability,
+                reliability and transformation – that is, an application aimed to provide sustainability in the way the
+                business is carried out, reliability of the platform being used to carry it out and transforming small
+                businesses digitally eventually impacting lives at different points in the supply chain.
+                <li class="pt-2">
+                    FarmWise resulted as a group conversation when the discussion was initiated
+                    around the concept of connecting a local producer to the end customer. It piqued our (designers)
+                    curiosity when we started discussing how "wise” it would be if the producer knew how
+                    much to grow based on the demand for the produce from their “farm” and hence the
+                    name came to being for this application as “FarmWise”
+                </li>
+                <li class="pt-2"> This case study outlines the various processes and learnings that have been
+                    acquired whilst working in the team to produce a high fidelity - mobile application design of
+                    the FarmWise application developed on the figma tool.</li>
                 
-           
-        </section>
+            </p>
 
-  <aj-footer></aj-footer>
+            <ul class="pt-2"> 
+                The various phases phases and processes that are covered in this case study can be given as : 
+                <li>Background Research</li>
+                <li>Design and Development plan - First Iteration</li>
+                <li>Story Boarding</li>
+                <li>Service Design</li>
+                <li>User Personas</li>
+                <li>Initial and final Design Prototypes</li>
+                <li>Usability Analysis with respect to 10 Heuristics provided by Nielsen Norman Group </li>
+            </ul>
 
-    </div>
+
+            <h3 class="container section__header">
+                Motivation and Background Research 
+            </h3>
+
+            <div class="container section__description mb-4">
+
+               
+                <p class="description">
+                    Having worked on multiple web and mobile applications spanning the agriculture sector, I
+                    saw a great opportunity to learn and explore this area in terms of digital transformation. Few
+                    of these applications and points of information that we looked into are :
+                </p>
+            
+                <li class="pt-2">Agrifood and Fisheries Export Services Portal</li>
+                <p>“ The Export Services Portal is a central source of information to better equip Western
+                    Australian agrifood and fisheries exporters to develop their business. It’s a
+                    comprehensive and easy tool to identify the key export related services provided by
+                    government (State and Commonwealth) departments and industry bodies to Western
+                    Australian agrifood and fisheries exporters. ” (Agrifood and Fisheries Export Services
+                    Portal at https://export.agric.wa.gov.au/ )
+                   </p>
+                <p> The solution is offered by the Government of Western Australia, with insights into the
+                    offering of this web portal that connects small industries in the agriculture sector by
+                    providing information for developing various businesses.</p>
+                <li class="pt-2">Phoenicia</li>
+                <p >This application has a great role to play in the conceptualisation of “FarmWise” as
+                    this portal aims at providing services and facilitating the business flow between
+                    Growers and Sellers. This idea became the seed for our application and we let it
+                    evolve and grow by defining functionalities and user flows.
+                    “connects fresh produce growers, merchants and buyers – online.
+                    </p>
+                <p>Phoenicia provides unprecedented visibility and transparency across the fresh produce
+                    value chain. With access to real time market data and the ability to manage your
+                    business when and where you choose, Phoenicia will save you time, strengthen your
+                    relationships, make you better informed and improve your decision making. It is the
+                    new way of doing business.” (Phoenicia at https://phoenicia.com.au/) </p>
+                <li class="pt-2">Sinarmas (Golden Agri-Resources Ltd.)</li>
+                <p> GAR is committed to be the leader in sustainable palm oil production by adopting
+                    best industry practices and standards, managing the environment responsibly, creating
+                    employment and empowering the communities.” (Sinarmas at
+                    https://www.sinarmas.com/en/agribusiness-and-food.html )</p>
+               
+                <li class="pt-2">Teagasc</li>
+                <p>“Teagasc – the Agriculture and Food Development Authority – is the national body
+                    providing integrated research, advisory and training services to the agriculture and
+                    food industry and rural communities.” ( Teagasc at https://www.teagasc.ie/about/)
+                    Teagasc provides Farm Advisory services being a Agriculture and Food Development
+                    authority of Ireland.</p>
+                
+                <p class="description">
+                    Following this, semi-structured interviews with some of the canidates that were recruited from the
+                    university's postgraduate cohort were carried out, to understand the means to socializing in the
+                    campus and identify a problem space, if any.
+                </p>
+
+                <p class="description">
+                    It was found out that 3 out of 5 students who are new to the campus hesitate to socialize as they
+                    fear that they might not have the common interests to socialize with other campus members.
+                    Further, a mechanism to connect people with common interests was missing as the clubs and societies
+                    at that point were not fully functioning as it was the first time the campus had reopened for
+                    classes after Covid-19
+                </p>
+                <p class="description">
+                    A consensus was hence arrived at, to design an application that would enable people to connect upon
+                    matching their interests or would let them explore new interests and find buddies doing so.
+                </p>
+                <p class="description">
+                    features that were decided to be integrated were
+                    <li class="pt-2">Sign up / Login.</li>
+                    <li class="pt-2"> Add / search interests.</li>
+                    <li class="pt-2">Explore people with similar interests.</li>
+                    <li class="pt-2">Chat with people on the app</li>
+                </p>
+                <h5 class="section__header">Low Fidelity Prototype design - Pen and Paper</h5>
+                <img class="img-responsive p-4" src="../../assets/lofi.png" />
+                <img class="img-responsive p-4" src="../../assets/lofi-2.png" />
+                <img class="img-responsive p-4" src="../../assets/lofi-3.png" />
+
+                <p class="description">
+                </p>
+            </div>
+
+
+            <!-- <div class="container-fluid p-0 ">
+                    <div class="row container__category">
+                        <div class="col-md-12 my-2 figmaWrapper">
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FbBZ2QZ7FDtonS7pL4z0xxs%2FUL-Buddies%3Fnode-id%3D1%253A6%26starting-point-node-id%3D1%253A6"
+                                allowfullscreen></iframe>
+
+                        </div>
+
+                        <a class="category__panel  show-small-Figma col-md-12"
+                            href="https://www.figma.com/proto/bBZ2QZ7FDtonS7pL4z0xxs/UL-Buddies?kind=&node-id=1%3A6&starting-point-node-id=1%3A6">
+                            <div class="card category__card ">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Prototype of UL Buddies App</h5>
+                                    <div class="img-container">
+                                        <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                        <i class="fab fa-icon fa-figma"></i>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </a>
+                        <a class="category__panel  show-small-Figma col-md-12"
+                            href="https://www.figma.com/file/goOYhNUOWMhxT2HTVVwGIm/MockUps?node-id=0%3A1">
+                            <div class="card category__card ">
+                                <div class="card-body">
+                                    <h5 class="card-title  text-center">Prototype of KidzBrainz App </h5>
+                                    <div class="img-container">
+                                        <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                        <i class="fab fa-icon fa-long-icon fa-figma"></i>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </a>
+
+                    </div>
+                </div> -->
+
+        </div>
+
+        <h3 class="container section__header">
+            The Second Phase
+        </h3>
+
+        <div class="container section__description mb-4">
+
+            <h5 class="section__header mt-4"> Introduction to the second phase </h5>
+            <p class="description">
+                This phase deals majorly with the evaluation of the UI design by carrying out the co-operative
+                evaluation with the users, where they would test the usability of the low-fidelity prototype.
+            </p>
+
+            <p class="description">
+                The technique that was fitting the requirement well, was found out to be summative evaluation. Usability
+                tests were conducted along the guidelines of cognitive walkthrough, walkthrough with thinking aloud and
+                cooperative evaluation, where the tasks had been laid out for the users to test that consisted of one
+                major vertical task and 3 smaller feature tasks.
+            </p>
+            <h5 class="section__header mt-4"> Recruitment and evaluation of the low fidelity prototype </h5>
+            <p class="description">
+                There were <b>5</b> participants that were recruited. The background of these participants was majorly
+                postgraduate students studying at University of Limerick, in different disciplines.
+            </p>
+
+            <p class="description">
+                The recruited participants were briefed about the activity and the process when they were approached in
+                order to obtain their informed consent
+            </p>
+
+            <p class="description">
+                The participants were informed that they could leave at any point they felt uncomfortable during the
+                usability testing session and the information they have shared would be kept confidential.
+            </p>
+            <h5 class="section__header mt-4"> Re-design requirements </h5>
+
+            <p class="description">
+                The following feedback points were found to be crucial and were the taken as the requirements for the
+                re-designing of the application based on the feedback during the evaluation stage:
+            </p>
+            <ol>
+                <li>Back navigation was missing in the application</li>
+                <li>Picking Interest screen to be re-designed to enable the user to search and add the desired interest
+                    rather than add from a set of interests that are available</li>
+                <li>“What if the user adds all the interests?” - the major bug that needed to be looked into.</li>
+                <li>How to resolve privacy concerns?</li>
+                <li>Adding a block/mute feature to avoid potential harassment on the platform</li>
+                <li>As a minor enhancement, an app landing screen was envisioned that gives the option to login and sign
+                    up</li>
+            </ol>
+
+            <h5 class="section__header mt-4"> Screens that are re-designed : low-fidelity </h5>
+            <img class="img-responsive p-4" src="../../assets/redesign.png" />
+            <img class="img-responsive p-4" src="../../assets/redesign_2.png" />
+            <img class="img-responsive p-4" src="../../assets/redesign_3.png" />
+            <img class="img-responsive p-4" src="../../assets/redesign_4.png" />
+
+            <h5 class="section__header mt-4"> Final Interactive medium fidelity prototype on figma </h5>
+            <p class="description"> The Fidelity of the prototype was increased to that of a medium fidelity and can be
+                found below :</p>
+            <div class="col-md-12 my-2 figmaWrapper">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FbBZ2QZ7FDtonS7pL4z0xxs%2FUL-Buddies%3Fnode-id%3D1%253A6%26starting-point-node-id%3D1%253A6"
+                    allowfullscreen></iframe>
+
+            </div>
+
+            <a class="category__panel  show-small-Figma col-md-12"
+                href="https://www.figma.com/proto/bBZ2QZ7FDtonS7pL4z0xxs/UL-Buddies?kind=&node-id=1%3A6&starting-point-node-id=1%3A6">
+                <div class="card category__card ">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Prototype of UL Buddies App</h5>
+                        <div class="img-container">
+                            <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                            <i class="fab fa-icon fa-figma"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </a>
+        </div>
+        <div class="section__reflection">
+
+
+            <h3 class="container section__header">
+                Reflection
+            </h3>
+            <div class="container section__description mb-4">
+                <p class="description">
+                    This was a great learning experience for me working in the academic environment and learning by
+                    witnessing through participation in all the phases in this iteration of design from right from
+                    ideation to design to low-fidelity to medium fidelity prototyping.
+                </p>
+                <p class="description">
+                    This project exercises the Ideate, Design, Prototype, Testing & Evaluation phases in the processes
+                    in an iterative fashion, where the Process is stopped during the second iteration after the
+                    prototype phase and before proceeding the second testing and evaluation phase.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <aj-footer></aj-footer>
+
+</div>
