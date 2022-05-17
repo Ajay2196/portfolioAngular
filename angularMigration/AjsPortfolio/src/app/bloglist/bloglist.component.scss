@@ -1,5 +1,5 @@
 .section__description {
-      min-height: 50vh;
+    //   min-height: 50vh;
     position: relative;
 }
 .handler__message{
@@ -7,4 +7,12 @@
     margin-top: 3rem;
     font-size: 1.2rem;
     font-weight: 300;
+}
+.card-footer{
+    background-color: transparent;
+}
+.card__footer__date{
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #1282a8;
 }

@@ -1,10 +1,10 @@
 
     <div class="d-flex flex-column body-container">
-        <section class="work__section container section__description">
+        <section class="work__section container section__description pt-5">
             <div class="breadcrumb__blog py-4">
                 <a (click)="router.navigate(['/home'])" class="crumb">Home </a>|
                 <a (click)="router.navigate(['/blog'])" class="crumb"> Blog Posts </a> |
-                <a (click)="navigate();" *ngIf="!error" class="crumb">{{blogPost.category == 'Technical' ? 'Technology Blog Posts' : (blogPost.category == 'General' ? ' Interaction and Experience Design Blog Posts' : '')}}
+                <a (click)="navigate();" *ngIf="!error" class="crumb">{{blogPost.category == 'Design' ? 'Design Projects' : (blogPost.category == 'General' ? ' Interaction and Experience Design Blog Posts' : '')}}
                 </a> |
                 <span class="blogCategory"> {{blogPost.title}}</span>
             </div>
@@ -20,8 +20,8 @@
                                     <img src="assets//Ajay.png" alt="Profile image">
                                     <div class="info-container">
                                         <span class="profile__name">Ajay "AJ" Vijayakumaran</span>
-                                        <span class="d-block time">{{blogPost.time | date: 'medium'}}</span>
-                                        <span class="d-block ">10 Min Read</span>
+                                        <span class="d-block time">{{blogPost.time | date: 'MMM d, y, h:mm a'}}</span>
+                                        <!-- <span class="d-block ">10 Min Read</span> -->
                                     </div>
                                 </div>
                             </div>

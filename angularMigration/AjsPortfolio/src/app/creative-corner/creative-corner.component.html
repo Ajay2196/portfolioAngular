@@ -1,0 +1,110 @@
+<div class="d-flex flex-column body-container mt-5">
+
+    <section class="container work__section mb-4  ">
+        <div class="breadcrumb__blog py-4">
+         <a (click)="router.navigate(['/home'])" class="crumb">Home </a>| <span class="crumb">Creative Corner</span>
+
+        </div>
+        <h2 class="container section__header">
+            <i class="fal  fa-palette"></i> Creative Corner
+        </h2>
+        <div class="container section__description mb-4">
+            <p class="description"> Some of my creative work can be explored here! :)
+            </p>
+          
+        </div>
+
+        <div class="container-fluid p-0 ">
+
+            <div class="row container__category">
+        
+                           
+                           
+                            <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('photography')">
+                                <div class="card category__card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title  text-center">photography</h5>
+                                        <div class="img-container">
+                                            <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                            <i class="fal fa-icon fa-camera-retro"></i>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </a>
+                            <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('videography')" >
+                                <div class="card category__card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Videography</h5>
+                                        <div class="img-container">
+                                            <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                            <i class="fal fa-icon fa-video"></i>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </a>
+                            <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('digital-art')">
+                                <div class="card category__card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Digital Art</h5>
+                                        <div class="img-container">
+                                            <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                            <i class=" fa-icon fal fa-palette"></i>
+        
+        
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </a>
+                            <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('audiography')">
+                                <div class="card category__card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Audio Story</h5>
+                                        <div class="img-container">
+                                            <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                            <i class=" fa-icon fal fa-volume-up"></i>
+        
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </a>
+        
+                            <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('ar')" >
+                                <div class="card category__card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Augmented Reality</h5>
+                                        <div class="img-container">
+                                            <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
+                                            <i class="fal fa-icon fa-long-icon fa-vr-cardboard"></i>
+        
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </a>
+                            </div>
+                            </div>
+    </section>
+
+    <aj-footer></aj-footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+
+    <div class="d-flex flex-column body-container mt-5 ">
+
+
+        <section class="container work__section mb-4  ">
+           <div class="breadcrumb__blog py-4">
+            <a (click)="router.navigate(['/home'])" class="crumb">Home </a>| <span class="crumb">Projects</span>
+
+           </div>
+            
+            <h2 class="container section__header section__description">
+                <i class="fal  fa-ruler-combined"></i> Projects
+            </h2>
+            
+            <div class="container section__description mb-4">
+                <p class="description"> Some of the important projects that I have worked over this year.</p>
+           
+            
+            <div class="container-fluid ">
+                <div class="row container__category">
+                    <a class="category__panel  col-lg-4 col-md-6" (click)="navigateURL('projects/buddies')">
+                        <div class="card category__card ">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">UL Buddies</h5>
+                                <div class="img-container">
+                                    <img src="assets/buddies.svg" class="card-img-top my-3" alt="...">
+        
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                    </a>
+                    <a class="category__panel  col-lg-4 col-md-6" (click)="navigateURL('farmwise')">
+                        <div class="card category__card ">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">FarmWise</h5>
+                                <div class="img-container">
+                                    <img src="assets/FarmWise.svg" class="card-img-top my-3" alt="...">
+        
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                    </a>
+                    <a class="category__panel  col-lg-4 col-md-6" (click)="navigateURL('crisis')">
+                        <div class="card category__card ">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Accomodation Crisis</h5>
+                                <div class="img-container">
+                                    <img src="assets/crisis.svg" class="card-img-top my-3" alt="...">
+        
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+  <aj-footer></aj-footer>
+
+    </div>

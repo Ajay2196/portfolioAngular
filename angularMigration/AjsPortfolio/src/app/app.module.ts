@@ -22,6 +22,11 @@ import { FormsModule } from '@angular/forms';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { BloglistComponent } from './bloglist/bloglist.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { UXProjectsComponent } from './uxprojects/uxprojects.component';
+import { UlBuddiesComponent } from './ul-buddies/ul-buddies.component';
+import { FarmwiseComponent } from './farmwise/farmwise.component';
+import { AccomodationCrisisComponent } from './accomodation-crisis/accomodation-crisis.component';
+import { CreativeCornerComponent } from './creative-corner/creative-corner.component';
 
 
 @NgModule({
@@ -42,6 +47,11 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
     LoginPageComponent,
     BloglistComponent,
     BlogPostComponent,
+    UXProjectsComponent,
+    UlBuddiesComponent,
+    FarmwiseComponent,
+    AccomodationCrisisComponent,
+    CreativeCornerComponent,
   ],
   imports: [
     BrowserModule,

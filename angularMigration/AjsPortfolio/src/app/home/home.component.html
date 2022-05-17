@@ -3,12 +3,16 @@
 
         <div class="section__description intro__bg--art d-flex flex-column justify-content-center ">
             <h1 class=" container section__header">
-                Ajay Vijayakumaran
+                Hello! <br>
+                I am Ajay Vijayakumaran
             </h1>
             <div class="container section__subtitle">
-                <ngx-typed-js [loop]="true" [typeSpeed]="100"  [backSpeed]="75" [strings]="['Web Developer', 'Software Consultant', 'Budding Interaction Designer']">
+                <ngx-typed-js [loop]="true" [typeSpeed]="100"  [backSpeed]="75" [strings]="[' budding Interaction Designer', 'Software Consultant', 'Web Developer']">
                     I am a <span class="typing section__subtitle subtitle--flicker"></span>
                   </ngx-typed-js>
+                  <p class="description w-50 w-xs-100 pt-2">
+                    I love to touch lives and bring about a difference by the virtue of meaningful experiences that are user-centered.
+                </p>
             </div>
 
         </div>
@@ -16,62 +20,35 @@
 
     </section>
     <section class="about__section mb-4">
-        <h2 class="container section__header">
-            About Me
-        </h2>
+    
         <div class="container section__description">
-            <p class="description">
-                Hello there! I am Ajay Vijayakumaran, I am often called "AJ" and I love it too! I am a postgraduate
-                student at the University of Limerick,Ireland, where I study Interaction and Experience Design.
-                About me? Well, I am an individual who is driven by passion to innovate and I love to take on
-                challenges and find solutions to
-                problem statements. I strongly believe that empathy is the first step towards solving any
-                problem.
-                My passion towards designing solutions and love for web development fuels my aspirations to become
-                a successful Interaction and Experience Designer.
-            </p>
-            <p class="description">
-                Prior to joining the course, I have had an amazing work experience filled with immense learning as a
-                User Interface Developer/Designer of web applications at renowned Multinational firms.
-            </p>
+           
+          
         </div>
     </section>
     <section class="work__section mb-4">
-        <h2 class="container section__header">
+        <!-- <h2 class="container section__header">
             My Work
-        </h2>
+        </h2> -->
         <div class="container section__description">
-            <p class="description">
+            <!-- <p class="description">
                 This year has been filled with such great amount of learning! I feel very fortunate that I am able
                 to leverage the opportunity of studying and practically implementing Interaction Design learning
                 from the best minds!
 
-            </p>
+            </p> -->
             <div class="container-fluid p-0 ">
 
                 <div class="row container__category">
 
-
-                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('photography')">
+                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('projects')">
                         <div class="card category__card ">
                             <div class="card-body">
-                                <h5 class="card-title  text-center">Photography</h5>
+                                <h5 class="card-title text-center"> Design Projects</h5>
                                 <div class="img-container">
                                     <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
-                                    <i class="fal fa-icon fa-camera-retro"></i>
-                                </div>
+                                    <i class=" fa-icon fal fa-ruler-combined"></i>
 
-                            </div>
-
-                        </div>
-                    </a>
-                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('audiography')">
-                        <div class="card category__card ">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Audio Story</h5>
-                                <div class="img-container">
-                                    <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
-                                    <i class=" fa-icon fal fa-volume-up"></i>
 
                                 </div>
 
@@ -79,26 +56,14 @@
 
                         </div>
                     </a>
-                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('videography')" >
+                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('blog')">
                         <div class="card category__card ">
                             <div class="card-body">
-                                <h5 class="card-title text-center">Videography</h5>
+                                <h5 class="card-title text-center">Blog</h5>
                                 <div class="img-container">
                                     <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
-                                    <i class="fal fa-icon fa-video"></i>
-                                </div>
+                                    <i class=" fa-icon fal fa-blog"></i>
 
-                            </div>
-
-                        </div>
-                    </a>
-                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('ar')" >
-                        <div class="card category__card ">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Augmented Reality</h5>
-                                <div class="img-container">
-                                    <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
-                                    <i class="fal fa-icon fa-long-icon fa-vr-cardboard"></i>
 
                                 </div>
 
@@ -106,7 +71,13 @@
 
                         </div>
                     </a>
-                    <a class="category__panel  col-lg-3 col-md-6"  (click)="navigateURL('prototype')">
+
+                    
+
+                   
+
+                   
+                    <!-- <a class="category__panel  col-lg-3 col-md-6"  (click)="navigateURL('prototype')">
                         <div class="card category__card ">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Prototypes</h5>
@@ -119,7 +90,7 @@
                             </div>
 
                         </div>
-                    </a>
+                    </a> -->
              
                     <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('ui')" >
                         <div class="card category__card ">
@@ -135,37 +106,23 @@
 
                         </div>
                     </a>
-
-                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('digital-art')">
+                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('creativecorner')">
                         <div class="card category__card ">
                             <div class="card-body">
-                                <h5 class="card-title text-center">Digital Art</h5>
+                                <h5 class="card-title  text-center">Creative Corner</h5>
                                 <div class="img-container">
                                     <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
-                                    <i class=" fa-icon fal fa-palette"></i>
-
-
+                                    <i class="fal fa-icon fa-palette"></i>
                                 </div>
 
                             </div>
 
                         </div>
                     </a>
-                    <a class="category__panel  col-lg-3 col-md-6" (click)="navigateURL('blog')">
-                        <div class="card category__card ">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">blog</h5>
-                                <div class="img-container">
-                                    <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
-                                    <i class=" fa-icon fal fa-blog"></i>
+                  
+                   
 
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </a>
+                   
                 </div>
             </div>
 
