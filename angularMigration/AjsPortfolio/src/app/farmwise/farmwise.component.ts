@@ -13,4 +13,10 @@ export class FarmwiseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  download(){
+    var link = document.createElement("a");
+        link.download = "FarmWise_caseStudy";
+        link.href = "../../assets/FarmWise.pdf"
+        link.click();
+  }
 }
