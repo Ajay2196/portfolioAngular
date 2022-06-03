@@ -1,5 +1,5 @@
 <div class=" nav-container">
-    <a class="logo" (click)="router.navigate(['home'])">
+    <a class="logo" [routerLink] ="isDev ? 'dev' : 'home' ">
         <img src="assets/logo.svg" alt="Aj's Logo" srcset="">
     </a>
 </div>

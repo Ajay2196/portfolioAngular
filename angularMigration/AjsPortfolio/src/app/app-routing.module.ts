@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NoPreloading, PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@angular/router';
 import { AccomodationCrisisComponent } from './accomodation-crisis/accomodation-crisis.component';
 import { AudiographyComponent } from './audiography/audiography.component';
 import { AugmentedRealityComponent } from './augmented-reality/augmented-reality.component';
@@ -21,6 +21,7 @@ import { UXProjectsComponent } from './uxprojects/uxprojects.component';
 import { VideographyComponent } from './videography/videography.component';
 
 const routes: Routes = [
+  {path:'dev', loadChildren : ()=> import ('./development/development.module').then(m=>m.DevelopmentModule)},
   { path: 'home', component: HomeComponent },
   { path: 'audiography', component: AudiographyComponent },
   { path: 'photography', component: PhotographyComponent },
@@ -43,7 +44,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy : NoPreloading})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
