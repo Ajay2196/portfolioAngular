@@ -5,5 +5,6 @@ export const environment = {
   authenticate : "portfolioUsers/authenticate",
   getPostByCategory : "blogPosts/getTitlesByCategory",
   getPostById : "blogPosts/getBlogPostById",
-  createPosts : "blogPosts/create/"
+  createPosts : "blogPosts/create/",
+  postImgFile: "image/upload-image/"
 };

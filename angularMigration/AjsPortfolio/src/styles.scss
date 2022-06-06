@@ -319,3 +319,9 @@ img.blogImgBig {display: block;padding-top: 1rem;width: 100%;box-shadow: 2px 7px
 
 img.blogImgTwo {box-shadow: 2px 7px 20px 0px #3183a84a;width: calc( 50% - 2rem );padding: 2rem;display: flex;margin: 1rem;float: left;}
 i.img-caption {position: absolute;width: 100%;text-align: center;bottom: 1.75rem;}
+
+
+.blog-renderer img,.angular-editor img {
+    max-width: 75%;
+    margin: 1rem;
+}

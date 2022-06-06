@@ -24,5 +24,7 @@ export class HttpService {
   GetPostById(param:Params){;
     return this.http.get(environment.baseURL+environment.getPostById,{params:param}).pipe(catchError(error=>{ return throwError(()=> error)}));
     }
-  
+  uploadImg(date:string,form : FormData){
+    return this.http.post(environment.baseURL+environment.postImgFile+"?v="+date,form);
+  }
 }
