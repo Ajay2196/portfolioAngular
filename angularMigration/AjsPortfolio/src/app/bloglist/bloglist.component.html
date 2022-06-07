@@ -5,14 +5,14 @@
         <section class="work__section mb-4 container section__description mb-4">
             <div class="breadcrumb__blog py-4">
                 <a (click)="router.navigate(['/home'])" class="crumb">Home </a> |
-                <a (click)="router.navigate(['/blog'])" class="crumb"> Blog Posts </a> |
-                <span  class="crumb">lolInterpolationStart category['category'] == 'Design' ? 'Design Projects' : (category['category'] == 'General' ? ' Interaction and Experience Design Blog Posts' : '') lolInterpolationEnd
+                <!-- <a (click)="router.navigate(['/blog'])" class="crumb"> Blog Posts </a> | -->
+                <span  class="crumb">Blog
                 </span>
             </div>
             <h2 class="container section__header">
                
 
-                <i class="fal  fal fa-blog"></i> lolInterpolationStart category['category'] == 'Design' ? 'Design Projects' : (category['category'] == 'General' ? ' Interaction and Experience Design Blog Posts' : '') lolInterpolationEnd
+                <i class="fal  fal fa-blog"></i> Blog
             </h2>
                <div class="row container__category">
                    <ng-container *ngIf="!error">
@@ -20,7 +20,7 @@
                         <a class="category__panel   col-md-4" (click) = "goToBlogPost(post._id)" >
                             <div class="card category__card ">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">lolInterpolationStart post.title lolInterpolationEnd </h5>
+                                    <h5 class="card-title text-center">{{ post.title }} </h5>
                                     <div class="img-container">
                                         <img src="assets/panel_bg.png" class="card-img-top my-3" alt="...">
                                     <i class=" fa-icon fal fa-blog"></i>
@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="card-footer text-right">
                                     <span class="card__footer__date">
-                                        lolInterpolationStart post.time | date: 'MMM d, y, h:mm a' lolInterpolationEnd
+                                        {{ post.time | date: 'MMM d, y, h:mm a' }}
                                     </span>
                                 </div>
                             </div>

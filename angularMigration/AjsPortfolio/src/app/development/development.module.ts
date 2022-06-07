@@ -6,6 +6,7 @@ import { ArchitecturesComponent } from './architectures/architectures.component'
 import { AchievementsComponent } from './achievements/achievements.component';
 import { DevHomeComponent } from './dev-home/dev-home.component';
 import { SharedModule } from '../shared-module/shared-module.module';
+import { DevHomewrapperComponent } from './dev-homewrapper/dev-homewrapper.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { SharedModule } from '../shared-module/shared-module.module';
     ArchitecturesComponent,
     AchievementsComponent,
     DevHomeComponent,
+    DevHomewrapperComponent,
   ],
   imports: [
    SharedModule,

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthRouteService } from '../services/auth-route.service';
+import { AuthService } from '../services/auth.service';
 import { HttpService } from '../services/http-service.service';
 
 @Component({
@@ -10,9 +12,15 @@ import { HttpService } from '../services/http-service.service';
 export class LoginPageComponent implements OnInit {
   username:string ="";
   password:string="";
-  constructor(private http: HttpService, private router :Router) { }
+  authNav:string="";
+  constructor(private authServ :AuthService,private http: HttpService, private router :Router, private authRouteServ : AuthRouteService) { }
 
   ngOnInit(): void {
+
+    this.authRouteServ._previousRoute.subscribe(val=>
+      {
+        this.authNav=val;
+      })
   }
 
   authenticateMe(){
@@ -23,7 +31,8 @@ export class LoginPageComponent implements OnInit {
     this.http.authenticateUser(userData).subscribe(user =>{
       if(user.success){
         sessionStorage.setItem('isAJLoggedIn', user.user.id);
-        this.router.navigate(['/home']);
+        this.authServ.setToken(user.token);
+       this.authNav? this.router.navigate([this.authNav]) : this.router.navigate(['/home']);
       }
     })
   }

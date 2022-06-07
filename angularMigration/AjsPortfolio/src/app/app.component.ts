@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthRouteService } from './services/auth-route.service';
 import { HttpService } from './services/http-service.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   
    
   }
   

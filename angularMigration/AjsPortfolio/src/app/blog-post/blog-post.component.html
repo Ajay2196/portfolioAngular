@@ -3,8 +3,8 @@
         <section class="work__section container section__description pt-5">
             <div class="breadcrumb__blog py-4">
                 <a (click)="router.navigate(['/home'])" class="crumb">Home </a>|
-                <a (click)="router.navigate(['/blog'])" class="crumb"> Blog Posts </a> |
-                <a (click)="navigate();" *ngIf="!error" class="crumb">{{blogPost.category == 'Design' ? 'Design Projects' : (blogPost.category == 'General' ? ' Interaction and Experience Design Blog Posts' : '')}}
+                <!-- <a (click)="router.navigate(['/blog'])" class="crumb"> Blog Posts </a> | -->
+                <a (click)="navigate();" *ngIf="!error" class="crumb">Blog
                 </a> |
                 <span class="blogCategory"> {{blogPost.title}}</span>
             </div>

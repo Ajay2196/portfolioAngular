@@ -9,17 +9,15 @@ import { AppStateService } from 'src/app/shared-module/shared-services/app-state
 })
 export class DevHomeComponent implements OnInit {
 
-  constructor(public router : Router, private appStateServ : AppStateService) {
-    sessionStorage.setItem('isDev',JSON.stringify(true));
+  constructor(public router : Router) {
+    
    }
 
   ngOnInit(): void {
-    this.appStateServ.appMode.next(true);
   }
 
   navigateURL(url:string){
-    this.router.navigate([url]);
-  }
-
+    url=='blog'? this.router.navigate(['/blogTitles'],{queryParams : { category:'Technical' }}) : this.router.navigate([url]);
+    }
   
 }

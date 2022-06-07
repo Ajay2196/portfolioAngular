@@ -5,8 +5,7 @@ import { HttpService } from '../services/http-service.service';
 @Component({
   selector: 'app-bloglist',
   templateUrl: './bloglist.component.html',
-  styleUrls: ['./bloglist.component.scss'],
-  interpolation: ['lolInterpolationStart','lolInterpolationEnd']
+  styleUrls: ['./bloglist.component.scss']
 })
 export class BloglistComponent implements OnInit {
   blogPosts : any = [];

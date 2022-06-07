@@ -21,6 +21,7 @@ export class CreateBlogPostComponent implements OnInit,OnDestroy {
     minWidth: '0',
     translate: 'yes',
     enableToolbar: true,
+    sanitize : false,
     showToolbar: true,
     placeholder: 'Enter text here...',
     defaultParagraphSeparator: '',
@@ -64,6 +65,8 @@ export class CreateBlogPostComponent implements OnInit,OnDestroy {
   }
   ngOnInit(): void {
   } 
+
+  
   createPost(){
     var item ={
       title : this.title,

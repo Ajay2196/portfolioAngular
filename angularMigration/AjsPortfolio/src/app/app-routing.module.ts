@@ -8,9 +8,11 @@ import { BlogComponent } from './blog/blog.component';
 import { BloglistComponent } from './bloglist/bloglist.component';
 import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.component';
 import { CreativeCornerComponent } from './creative-corner/creative-corner.component';
+import { DesignHomeWrapperComponent } from './design-home-wrapper/design-home-wrapper.component';
 import { DigitalArtComponent } from './digital-art/digital-art.component';
 import { FarmwiseComponent } from './farmwise/farmwise.component';
 import { AuthenticatedUserGuard } from './guards/authenticated-user.guard';
+import { DevDesignNavigationGuard } from './guards/dev-design-navigation.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PhotographyComponent } from './photography/photography.component';
@@ -22,7 +24,8 @@ import { VideographyComponent } from './videography/videography.component';
 
 const routes: Routes = [
   {path:'dev', loadChildren : ()=> import ('./development/development.module').then(m=>m.DevelopmentModule)},
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate:[DevDesignNavigationGuard] },
+  { path: 'DesignHomeWrapper', component: DesignHomeWrapperComponent },
   { path: 'audiography', component: AudiographyComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'videography', component: VideographyComponent },
@@ -40,7 +43,7 @@ const routes: Routes = [
   { path: 'crisis', component: AccomodationCrisisComponent },
   { path: 'creativecorner', component: CreativeCornerComponent },
   { path: 'farmwise', component: FarmwiseComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '', redirectTo: '/DesignHomeWrapper', pathMatch: 'full'},
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@ import { UIComponent } from './ui/ui.component';
 import { DigitalArtComponent } from './digital-art/digital-art.component';
 import { BlogComponent } from './blog/blog.component';
 import { environment } from 'src/environments/environment';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
@@ -30,6 +30,9 @@ import { DevelopmentModule } from './development/development.module';
 import { SharedModule } from './shared-module/shared-module.module';
 import { CommonModule } from '@angular/common';
 import { AppStateService } from './shared-module/shared-services/app-state.service';
+import { DesignHomeWrapperComponent } from './design-home-wrapper/design-home-wrapper.component';
+import { AuthInterceptor } from './auth.interceptor';
+import { ErrorInterceptorInterceptor } from './error-interceptor.interceptor';
 
 
 @NgModule({
@@ -53,6 +56,7 @@ import { AppStateService } from './shared-module/shared-services/app-state.servi
     FarmwiseComponent,
     AccomodationCrisisComponent,
     CreativeCornerComponent,
+    DesignHomeWrapperComponent,
   ],
   imports: [
     CommonModule,
@@ -62,7 +66,15 @@ import { AppStateService } from './shared-module/shared-services/app-state.servi
     SharedModule,
     AppRoutingModule,
   ],
-  providers: [AppStateService],
+  providers: [AppStateService,{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi:true
+  },{
+    provide: HTTP_INTERCEPTORS,
+    useClass: ErrorInterceptorInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
